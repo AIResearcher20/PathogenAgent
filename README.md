@@ -1,3 +1,7 @@
+<p align="center">
+  <img src="assets/logo.png" alt="PathogenAgent Logo" width="200"/>
+</p>
+
 <div align="center">
 
 # 🧬 PathogenAgent  
