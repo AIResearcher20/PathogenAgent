@@ -1,8 +1,9 @@
 
-<img src="./assets/Logo.png" style="width:300px;">
-
----
 ### PathogenAgent
+---
+
+<img src="./assets/Logo.png" style="width:800px;">
+
 ---
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
