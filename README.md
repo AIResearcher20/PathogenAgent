@@ -1,14 +1,5 @@
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/main/assets/logo.png" width="200" />
-</p>
+PathogenAgent
 ---
-
-<h1 align="center">🧬 PathogenAgent</h1>
-
-# 🧬 PathogenAgent
-
-### 🧬 Agentic AI for Genomic Medicine | 🔍 Retrieval-Augmented Reasoning | 🤖 Fine-Tuned BioGPT | 📊 Evidence-Based Variant Interpretation  
-
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![BioGPT](https://img.shields.io/badge/BioGPT-Fine--Tuned-9C27B0?style=for-the-badge)
@@ -17,6 +8,10 @@
 ![Dataset](https://img.shields.io/badge/ClinVar-2M%20Variants-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
+---
+<p align="center">
+  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/main/assets/logo.png" width="200" />
+</p>
 ---
 
 ### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
