@@ -1,7 +1,7 @@
  
 ---
 
-<img src="./assets/Logo.png" style="width:1000px;">
+<img src="./assets/Logo.png" style="width:1600px;">
 
 ---
    ###PathogenAgent
