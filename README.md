@@ -10,7 +10,7 @@ PathogenAgent
 
 ---
 <p align="center">
-  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/main/assets/logo.png" width="200" />
+  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/assets/logo.png" width="200" />
 </p>
 ---
 
