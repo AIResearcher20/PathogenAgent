@@ -1,10 +1,22 @@
-# 🧬 PathogenAgent
+<div align="center">
 
-![Agentic AI](https://img.shields.io/badge/Agentic_AI-Medical_Reasoning-blue)
-![Genomics](https://img.shields.io/badge/Genomics-Variant_Interpretation-red)
-![RAG System](https://img.shields.io/badge/RAG-Evidence_Based-orange)
-![LLM](https://img.shields.io/badge/BioGPT-Fine_Tuned-green)
-![Status](https://img.shields.io/badge/Status-Research_Project-purple)
+# 🧬 PathogenAgent  
+
+![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
+![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
+![BioGPT](https://img.shields.io/badge/BioGPT-Fine--Tuned-9C27B0?style=for-the-badge)
+![RAG](https://img.shields.io/badge/RAG-Enabled-orange?style=for-the-badge)
+![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge)
+![Dataset](https://img.shields.io/badge/ClinVar-2M%20Variants-green?style=for-the-badge)
+![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+
+---
+
+### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
+### 🔬 Retrieval-Augmented Biomedical Reasoning with Multi-Agent Architecture  
+### 🤖 Fine-Tuned BioGPT + ClinVar + PubMed + GenBank Integration  
+
+</div>
 ---
 
 ---
