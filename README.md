@@ -1,7 +1,11 @@
-PathogenAgent
- 
----
+
 <img src="./assets/Logo.png" style="width:1600px;">
+
+---
+### 🧬 Agentic AI System for Clinical Variant Interpretation: Retrieval-Augmented Biomedical Reasoning with Fine-Tuned Language Models
+### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
+### 🔬 Retrieval-Augmented Biomedical Reasoning with Multi-Agent Architecture  
+### 🤖 Fine-Tuned BioGPT + ClinVar + PubMed + GenBank Integration  
 
 ---
 
@@ -13,18 +17,11 @@ PathogenAgent
 ![Dataset](https://img.shields.io/badge/ClinVar-2M%20Variants-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
-
----
-
-### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
-### 🔬 Retrieval-Augmented Biomedical Reasoning with Multi-Agent Architecture  
-### 🤖 Fine-Tuned BioGPT + ClinVar + PubMed + GenBank Integration  
-
 </div>
 ---
 
 
-### 🧬 Agentic AI System for Clinical Variant Interpretation: Retrieval-Augmented Biomedical Reasoning with Fine-Tuned Language Models
+
 
 ---
 
