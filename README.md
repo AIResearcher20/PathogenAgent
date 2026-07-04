@@ -18,289 +18,410 @@
 
 </div>
 ---
-# 🧬 PathogenAgent
+
 
 ### 🧬 Agentic AI System for Clinical Variant Interpretation: Retrieval-Augmented Biomedical Reasoning with Fine-Tuned Language Models
 
 ---
 
-## 📌 Overview
+📌 Overview
 
-**PathogenAgent** is an agentic artificial intelligence system designed for clinical variant interpretation in genomic medicine.
+PathogenAgent is an agentic artificial intelligence system for clinical variant interpretation in genomic medicine. The system combines:
 
-The system integrates large-scale genomic data processing, multi-source biomedical retrieval, and multi-step reasoning to generate evidence-grounded interpretations of genetic variants.
+Large‑scale genomic data engineering (8.9M ClinVar variants)
 
-The framework combines structured biomedical resources including:
+Multi‑source biomedical retrieval (PubMed, ClinVar, GenBank)
 
-- ClinVar (NCBI)
-- PubMed
-- GenBank
+Evidence‑grounded reasoning via a 10‑module agentic pipeline
 
-within a modular AI architecture for biomedical reasoning and analysis.
+Fine‑tuned BioGPT for clinical variant interpretation
 
----
 
-## 🧠 System Architecture
-
-![Architecture](assets/pathogenagent_architecture.png)
-
-The proposed system consists of two interconnected subsystems:
-
-- Dataset Engineering Pipeline (8 modules)
-- Agentic Reasoning Framework (10 modules)
 
 ---
 
-# 📊 Part I: Dataset Engineering Pipeline
+📊 Part 1: Dataset Engineering
 
-## 1.1 Dataset Overview
+1.1 Dataset Overview
 
-The system processes a large-scale ClinVar dataset containing **8,991,566 genetic variants** with **10 structured features**.
+The system processes a comprehensive ClinVar dataset containing 8,991,566 genetic variants with 10 structured features.
 
-| Property | Value |
-|----------|------|
-| Total Variants | 8,991,566 |
-| Features | 10 |
-| Unique Genes | 500+ |
-| Clinical Classes | 4 |
-| Source | ClinVar (NCBI) |
+Property	Value
 
----
+Total Variants	8,991,566
+Features	10
+Unique Genes	500+
+Clinical Classes	4
+Source	ClinVar (NCBI)
 
-## 1.2 Clinical Significance Distribution
 
-| Class | Percentage | Count |
-|------|------------|------|
-| Likely Benign | 67.03% | 6,027,000+ |
-| Benign | 13.06% | 1,174,000+ |
-| Pathogenic | 12.45% | 1,119,000+ |
-| Likely Pathogenic | 7.46% | 671,000+ |
+1.2 Clinical Significance Distribution
 
----
+The dataset captures four primary clinical interpretation classes with the following distribution:
 
-## 1.3 Top Genes by Variant Frequency
+Class	Percentage	Count
 
-| Gene | Approx. Count |
-|------|--------------|
-| BRCA2 | ~40,000 |
-| NF1 | ~35,000 |
-| BRCA1 | ~30,000 |
-| NEB | ~28,000 |
-| ATM | ~25,000 |
-| DMD | ~22,000 |
-| USH2A | ~20,000 |
-| FBN1 | ~18,000 |
-| RYR1 | ~15,000 |
-| APC | ~12,000 |
+Likely Benign	67.03%	6,027,000+
+Benign	13.06%	1,174,000+
+Pathogenic	12.45%	1,119,000+
+Likely Pathogenic	7.46%	671,000+
 
----
 
-## 1.4 Chromosomal Distribution
 
-The distribution of variants shows high concentration across major chromosomes, with chromosome 1–5 carrying the highest variant loads.
 
----
+1.3 Top Genes by Variant Frequency
 
-## 1.5 Dataset Processing Pipeline (8 Modules)
+The most frequently mutated genes in the dataset:
 
-1. Data Acquisition (ClinVar parsing from NCBI)
-2. Data Cleaning (missing values, normalization, deduplication)
-3. Feature Engineering (gene, chromosome, variant features)
-4. Statistical Analysis
-5. Data Visualization
-6. BioGPT-Compatible Formatting
-7. Dataset Splitting (Train / Validation / Test)
-8. Final Dataset Preparation
+Gene	Variant Count
 
----
+BRCA2	~40,000
+NF1	~35,000
+BRCA1	~30,000
+NEB	~28,000
+ATM	~25,000
+DMD	~22,000
+USH2A	~20,000
+FBN1	~18,000
+RYR1	~15,000
+APC	~12,000
 
-# 🧬 Part II: Agentic AI Architecture
 
-## 2.1 Core Language Model
 
-A previously fine-tuned BioGPT model is used as the core generation component:
 
-- Model: Sepideh2027/biogpt-clinvar-finetuned  
-- Architecture: BioGPT (Causal Language Model)  
-- Domain: Clinical variant interpretation  
-- Platform: Hugging Face Hub  
+1.4 Chromosomal Distribution
 
----
+Variant distribution across chromosomes shows the highest concentration on:
 
-## 2.2 Agentic Reasoning Pipeline (10 Modules)
+Chromosome	Variant Count
 
-The system implements a modular agent-based reasoning architecture:
+Chromosome 1	~300,000
+Chromosome 2	~280,000
+Chromosome 3	~260,000
+Chromosome 4	~240,000
+Chromosome 5	~220,000
 
-### 1. Intent Router
-Query classification and routing to appropriate tools.
 
-### 2. Tool Executor
-Biomedical retrieval from PubMed, ClinVar, GenBank.
 
-### 3. Evidence Integration
-Normalization and merging of multi-source evidence.
 
-### 4. Evidence Ranking
-Semantic + statistical ranking of retrieved evidence.
+1.5 Data Processing Pipeline
 
-### 5. RAG Context Builder
-Construction of retrieval-augmented context.
+The dataset engineering pipeline consists of 8 modular stages:
 
-### 6. Reflection Agent
-Evaluation of evidence quality and completeness.
+1. Data Acquisition – Raw ClinVar import from NCBI
 
-### 7. BioGPT Generator
-Fine-tuned model for clinical interpretation generation.
 
-### 8. Verification Agent
-Detection of hallucinations and factual inconsistencies.
-
-### 9. Report & Logger
-Structured output generation (JSON / Markdown / PDF).
-
-### 10. Orchestrator
-End-to-end pipeline coordination and execution.
-
----
+2. Data Cleaning – Missing value handling, deduplication, normalization
 
-## 2.3 System Flow
 
-User Query  
-↓  
-Intent Router  
-↓  
-Tool Executor (PubMed / ClinVar / GenBank)  
-↓  
-Evidence Integration  
-↓  
-Evidence Ranking  
-↓  
-RAG Context Builder  
-↓  
-Reflection Agent  
-↓  
-BioGPT Generator  
-↓  
-Verification Agent  
-↓  
-Report & Logger  
-↓  
-Orchestrator → Final AgentResult  
+3. Feature Engineering – Gene, chromosome, position, clinical significance extraction
 
----
 
-## 📊 Dataset–Model Integration
+4. Statistical Analysis – Distribution analysis, class balancing
 
-| Component | Role |
-|----------|------|
-| Dataset Pipeline | Data processing and structuring |
-| Agentic Pipeline | Inference and reasoning |
-| BioGPT Model | Language generation backbone |
-| Shared Artifacts | Gene/variant mappings |
 
----
+5. Data Visualization – Exploratory data analysis (EDA)
 
-## 🔬 Key Contributions
 
-- Large-scale ClinVar dataset engineering (8.9M variants)
-- Modular 8-stage dataset processing pipeline
-- 10-module agentic biomedical reasoning framework
-- Integration of retrieval, reasoning, and generation components
-- Fine-tuned BioGPT for clinical variant interpretation
-- Verification layer for hallucination reduction
+6. BioGPT‑Compatible Formatting – Text‑to‑text transformation for LLM fine‑tuning
 
----
 
-## 🛠 Tech Stack
+7. Dataset Splitting – Train/Validation/Test (70/15/15)
 
-**Core:**
-- PyTorch
-- Hugging Face Transformers
-- Sentence Transformers
-- FAISS
 
-**Data:**
-- Pandas
-- NumPy
-- Scikit-learn
-- SciPy
+8. Final Dataset Preparation – Ready for model training and evaluation
 
-**Biomedical APIs:**
-- NCBI Entrez (PubMed, ClinVar, GenBank)
-
----
-
-## 📈 Project Status
-
-### Dataset Pipeline
-✔ Data acquisition completed  
-✔ Data cleaning completed  
-✔ Feature engineering completed  
-✔ Dataset structuring completed  
-✔ Train/validation splitting completed  
-
-### Agentic System
-✔ Modular architecture designed  
-✔ Initial system integration completed  
-
-🚧 In Progress:
-- RAG optimization
-- Reflection module tuning
-- Verification module improvement
-- End-to-end evaluation pipeline
-- Manuscript preparation
-
----
-
-## 📦 Installation
-
-```bash
-git clone https://github.com/yourusername/PathogenAgent.git
-cd PathogenAgent
-pip install -r requirements.txt
-
-
----
-
-📄 License
-
-MIT License
-
-
----
-
-👤 Author
-
-Vania Karimi
-
-
----
-
-📎 Related Work
-
-BioGPT Model: Sepideh2027/biogpt-clinvar-finetuned
-
-ClinVar Dataset: Sepideh2027/clinvar-project-backup
 
 
 
 ---
 
-📧 Contact
+🧬 Part 2: Model Architecture & Agentic Pipeline
 
-For collaboration or questions, please open an issue in this repository.
+2.1 Core Language Model
+
+The system uses a fine‑tuned BioGPT model as its core reasoning engine:
+
+Property	Value
+
+Model	Sepideh2027/biogpt-clinvar-finetuned
+Architecture	BioGPT (Causal Language Model)
+Parameters	~300M
+Training Data	ClinVar variants (8.9M records)
+Domain	Clinical variant interpretation
+
+
+Model Link: Hugging Face – Sepideh2027/biogpt-clinvar-finetuned
+
+2.2 Agentic Pipeline (10 Modules)
+
+The system implements a 10‑module agentic pipeline for end‑to‑end clinical variant interpretation:
+
+Module 1: Intent Router
+
+Function: Classifies the input query and determines required tools
+Input: User query (text)
+Output: Intent type + required tools + confidence score
+
+Module 2: Tool Executor
+
+Function: Executes queries across biomedical databases
+Sources: PubMed (literature), ClinVar (variants), GenBank (sequences)
+Output: Raw evidence from all sources
+
+Module 3: Evidence Integration
+
+Function: Normalizes, deduplicates, and merges evidence
+Methods: Identifier‑based deduplication, semantic similarity
+Output: Canonical evidence list
+
+Module 4: Evidence Ranking
+
+Function: Scores and ranks evidence by relevance
+Methods: TF‑IDF + Semantic Similarity (all‑MiniLM‑L6‑v2) + Cross‑Encoder (optional)
+Output: Ranked evidence with composite scores
+
+Module 5: RAG Context Builder
+
+Function: Assembles top‑ranked evidence into structured context
+Output: Evidence‑grounded context for LLM generation
+
+Module 6: Reflection Agent
+
+Function: Self‑evaluates reasoning quality and evidence sufficiency
+Metrics: Coverage, coherence, confidence calibration
+Output: Reflection score + action recommendation
+
+Module 7: BioGPT Generator
+
+Function: Generates evidence‑grounded responses
+Model: Sepideh2027/biogpt-clinvar-finetuned
+Output: Comprehensive, cited clinical interpretation
+
+Module 8: Verification Agent
+
+Function: Detects hallucinations and verifies factual consistency
+Methods: Claim extraction, evidence‑based verification
+Output: Faithfulness score + hallucination claims
+
+Module 9: Report & Logger
+
+Function: Generates structured reports and maintains audit logs
+Formats: JSON, Markdown, PDF
+Output: Complete audit trail
+
+Module 10: Orchestrator
+
+Function: Manages workflow, coordinates module execution
+Output: Final structured result (AgentResult)
+
+2.3 Module Interaction Flow
+
+User Query
+│
+▼
+[1. Intent Router] ──► intent, tools
+│
+▼
+[2. Tool Executor] ──► raw evidence
+│
+▼
+[3. Evidence Integration] ──► canonical evidence
+│
+▼
+[4. Evidence Ranking] ──► ranked evidence
+│
+▼
+[5. RAG Context Builder] ──► structured context
+│
+▼
+[6. Reflection Agent] ──► reflection_score
+│
+▼
+[7. BioGPT Generator] ──► generated response
+│
+▼
+[8. Verification Agent] ──► faithfulness_score
+│
+▼
+[9. Report & Logger] ──► JSON / Markdown / PDF
+│
+▼
+[10. Orchestrator] ──► AgentResult
 
 
 ---
 
-🙏 Acknowledgments
+📊 Dataset – Model Integration
 
-NCBI for ClinVar, PubMed, GenBank
+The 8‑module dataset pipeline and 10‑module agentic pipeline are integrated through:
 
-Hugging Face for infrastructure
+Component	Role
 
-BioGPT research community
+Dataset Pipeline	Provides training/evaluation data for the model
+Agentic Pipeline	Uses the fine‑tuned model for inference
+Shared Artifacts	Gene lists, variant classes, clinical significance mappings
+
 
 
 ---
 
+🔬 Key Contributions
+
+Dataset Engineering
+
+8.9M ClinVar variants processed and structured
+
+10 features extracted per variant
+
+500+ genes with variant annotations
+
+4 clinical significance classes mapped
+
+
+Model & Architecture
+
+Fine‑tuned BioGPT model publicly available
+
+10‑module agentic pipeline for clinical reasoning
+
+Evidence‑grounded generation with citation tracking
+
+Hallucination detection via verification module
+
+
+
+---
+
+🛠 Tech Stack
+
+Core Libraries
+
+PyTorch – Deep learning framework
+
+Transformers (Hugging Face) – Model fine‑tuning
+
+Sentence‑Transformers – Semantic embeddings
+
+FAISS – Vector similarity search
+
+
+Data Processing
+
+Pandas – Data manipulation
+
+NumPy – Numerical computing
+
+Scikit‑learn – ML utilities
+
+
+APIs & Services
+
+NCBI Entrez – PubMed, ClinVar, GenBank retrieval
+
+Hugging Face Hub – Model hosting
+
+
+
+---
+
+📈 Project Status
+
+✅ Completed
+
+Dataset Engineering: 8.9M ClinVar variants processed (10 features, 500+ genes)
+
+Model Fine‑tuning: BioGPT fine‑tuned on ClinVar (publicly available)
+
+Architecture Design: 10‑module agentic pipeline + 8‑module dataset pipeline
+
+Visualization: Complete EDA (gene distribution, class distribution, chromosome distribution)
+
+Documentation: Full system documentation
+
+
+🔄 In Progress
+
+Pipeline Integration: End‑to‑end agentic pipeline integration
+
+RAG Optimization: Retrieval and generation tuning
+
+Verification Module: Hallucination detection fine‑tuning
+
+Benchmarking: Comprehensive evaluation on ClinVar test set
+
+Manuscript: Paper preparation
+
+
+
+---
+
+🚀 Installation
+
+git clone https://github.com/yourusername/PathogenAgent.git    
+cd PathogenAgent    
+pip install -r requirements.txt  
+  
+Requirements  
+  
+torch>=2.0.0    
+transformers>=4.30.0    
+sentence-transformers>=2.2.0    
+faiss-cpu>=1.7.4    
+numpy>=1.24.0    
+pandas>=2.0.0    
+scikit-learn>=1.3.0    
+scipy>=1.10.0    
+matplotlib>=3.7.0    
+seaborn>=0.12.0    
+tqdm>=4.65.0    
+requests>=2.31.0    
+biopython>=1.81    
+gradio>=4.0.0    
+reportlab>=4.0.0    
+statsmodels>=0.14.0  
+  
+  
+---  
+  
+📄 License  
+  
+MIT License  
+  
+  
+---  
+  
+👤 Author  
+  
+Vania Karimi  
+  
+  
+---  
+  
+📎 Related Work  
+  
+· Fine‑tuned BioGPT: Sepideh2027/biogpt-clinvar-finetuned  
+· ClinVar Dataset: Sepideh2027/clinvar-project-backup  
+  
+  
+---  
+  
+📧 Contact  
+  
+For questions or collaborations, please open an issue.  
+  
+  
+---  
+  
+🙏 Acknowledgments  
+  
+· NCBI for open access to ClinVar, PubMed, and GenBank  
+· Hugging Face for model hosting and infrastructure  
+· BioGPT team for the base architecture  
+  
+  
+---  
+  
+---    
+    
+.** 🚀
