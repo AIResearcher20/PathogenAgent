@@ -1,9 +1,9 @@
 ### PathogenAgent
 
-
 <p align="center">
-  <img src="./assets/logo.png" width="200" />
+  <img src="https://raw.githubusercontent.com/AIResearcher20/PathogenAgent/main/assets/logo.jpg" width="200">
 </p>
+
 
 ---
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
