@@ -1,4 +1,10 @@
 PathogenAgent
+
+
+<p align="center">
+  <img src="./assets/logo.png" width="200" />
+</p>
+
 ---
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
@@ -8,10 +14,7 @@ PathogenAgent
 ![Dataset](https://img.shields.io/badge/ClinVar-2M%20Variants-green?style=for-the-badge)
 ![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
 
----
-<p align="center">
-  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/assets/logo.png" width="200" />
-</p>
+
 ---
 
 ### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
