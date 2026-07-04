@@ -1,4 +1,18 @@
+# 🧬 PathogenAgent
+
+[![Python](https://img.shields.io/badge/Python-3.9%2B-blue.svg)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-red.svg)](https://pytorch.org/)
+[![HuggingFace](https://img.shields.io/badge/🤗-Model-yellow.svg)](https://huggingface.co/Sepideh2027/biogpt-clinvar-finetuned)
+[![HuggingFace Datasets](https://img.shields.io/badge/🤗-Dataset-FFD21E.svg)](https://huggingface.co/datasets/Sepideh2027/clinvar-project-backup)
+[![License](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
+[![arXiv](https://img.shields.io/badge/arXiv-Pending-b31b1b.svg)](https://arxiv.org/)
+[![Status](https://img.shields.io/badge/Status-WIP-orange.svg)()
+[![Colab](https://img.shields.io/badge/Colab-Open-F9AB00.svg)](https://colab.research.google.com/)
+[![Paper](https://img.shields.io/badge/Paper-In%20Preparation-9C27B0.svg)]()
+
 ### 🧬 Agentic AI for Genomic Medicine | 🔍 Retrieval-Augmented Reasoning | 🤖 Fine-Tuned BioGPT | 📊 Evidence-Based Variant Interpretation
+
+---
 
 ---
 
