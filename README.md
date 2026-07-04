@@ -1,5 +1,5 @@
 
-<img src="./assets/Logo.png" style="width:1600px;">
+<img src="./assets/logo.png" style="width:1600px;">
 
 ---
 ### 🧬 Agentic AI System for Clinical Variant Interpretation: Retrieval-Augmented Biomedical Reasoning with Fine-Tuned Language Models
