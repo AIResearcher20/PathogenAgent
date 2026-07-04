@@ -1,10 +1,10 @@
 <p align="center">
-  <img src="assets/logo.png" alt="PathogenAgent Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/PathogenAgent/main/assets/logo.png" alt="PathogenAgent Logo" width="200"/>
 </p>
 
-<div align="center">
+# 🧬 PathogenAgent
 
-# 🧬 PathogenAgent  
+### 🧬 Agentic AI for Genomic Medicine | 🔍 Retrieval-Augmented Reasoning | 🤖 Fine-Tuned BioGPT | 📊 Evidence-Based Variant Interpretation  
 
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
