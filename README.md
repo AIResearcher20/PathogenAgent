@@ -1,9 +1,10 @@
+
+<img src="./assets/Logo.png" style="width:300px;">
+
+---
 ### PathogenAgent
 ---
 
-<img src="./assets/Logo.png" width="200" />
-
----
 ![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
 ![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
 ![BioGPT](https://img.shields.io/badge/BioGPT-Fine--Tuned-9C27B0?style=for-the-badge)
