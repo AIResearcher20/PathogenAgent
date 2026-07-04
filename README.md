@@ -1,6 +1,9 @@
 <p align="center">
-  <img src="https://raw.githubusercontent.com/YOUR_USERNAME/PathogenAgent/main/assets/logo.png" alt="PathogenAgent Logo" width="200"/>
+  <img src="https://raw.githubusercontent.com/AIResearcher20/REPO/main/assets/logo.png" width="200" />
 </p>
+---
+
+<h1 align="center">🧬 PathogenAgent</h1>
 
 # 🧬 PathogenAgent
 
