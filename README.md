@@ -1,35 +1,22 @@
-
-<img src="./assets/logo.png" style="width:800px;">
-
----
-
 🧬 PathogenAgentAI
 
 <p align="center">
-
-[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
-[![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c?logo=pytorch)](https://pytorch.org/)
-[![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/docs/transformers/index)
-[![BioGPT](https://img.shields.io/badge/Model-BioGPT-success)](https://huggingface.co/microsoft/biogpt)
-[![LoRA](https://img.shields.io/badge/PEFT-LoRA-green)](https://huggingface.co/docs/peft/en/developer_guides/lora)
-[![ClinVar](https://img.shields.io/badge/Data-ClinVar-red)](https://www.ncbi.nlm.nih.gov/clinvar/)
-[![Status](https://img.shields.io/badge/Status-Active%20Development-orange)]()
-[![Research](https://img.shields.io/badge/Research-AI%20for%20Science-purple)]()
-
+  <strong>A Modular Platform for Biomedical Data Engineering and Foundation Model Integration</strong>
 </p>
 
 <p align="center">
-
-**A Modular Platform for Biomedical Data Engineering and Foundation Model Integration**
-
+  <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11"></a>
+  <a href="https://pytorch.org/"><img src="https://img.shields.io/badge/PyTorch-2.x-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white" alt="PyTorch 2.x"></a>
+  <a href="https://huggingface.co/docs/transformers/index"><img src="https://img.shields.io/badge/🤗%20Transformers-Latest-F9A8D4?style=for-the-badge" alt="Hugging Face Transformers"></a>
+  <a href="https://huggingface.co/Sepideh2027/biogpt-clinvar-finetuned"><img src="https://img.shields.io/badge/🧬%20BioGPT--ClinVar-Fine--tuned-22A699?style=for-the-badge" alt="Fine-tuned BioGPT-ClinVar"></a>
+  <a href="https://huggingface.co/docs/peft/en/developer_guides/lora"><img src="https://img.shields.io/badge/PEFT-LoRA-40A578?style=for-the-badge" alt="PEFT LoRA"></a>
+  <a href="https://www.ncbi.nlm.nih.gov/clinvar/"><img src="https://img.shields.io/badge/Data-ClinVar-8B0000?style=for-the-badge" alt="ClinVar Data"></a>
 </p>
 
----
-
 <p align="center">
-
-A Modular Platform for Biomedical Data Engineering and Foundation Model Integration
-
+  <a href="#"><img src="https://img.shields.io/badge/Status-Active%20Development-FFA500?style=for-the-badge" alt="Status: Active Development"></a>
+  <a href="#"><img src="https://img.shields.io/badge/Research-AI%20for%20Science-6A0DAD?style=for-the-badge" alt="Research: AI for Science"></a>
+  <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-3D9970?style=for-the-badge" alt="License: MIT"></a>
 </p>
 
 ---
@@ -308,14 +295,12 @@ PathogenAgentAI does not train a biomedical language model from scratch. Instead
 
 Companion Model
 
-The language model originates from:
-
-PathogenAgentAI-BioGPT-LoRA
-A parameter-efficient adaptation of BioGPT for clinical genomic variant interpretation using Low-Rank Adaptation (LoRA).
-
-The model is publicly available on Hugging Face:
+The fine-tuned language model is publicly available on Hugging Face:
 
 https://img.shields.io/badge/🤗%20Hugging%20Face-Model-ffd21e
+
+biogpt-clinvar-finetuned
+A parameter-efficient adaptation of BioGPT for clinical genomic variant interpretation using Low-Rank Adaptation (LoRA).
 
 BioGPT-ClinVar (Companion) PathogenAgentAI
 Biomedical language model adaptation Scientific AI software platform
@@ -362,7 +347,7 @@ base_model = AutoModelForCausalLM.from_pretrained("microsoft/biogpt")
 tokenizer = AutoTokenizer.from_pretrained("microsoft/biogpt")
 
 # Load LoRA adapter
-model = PeftModel.from_pretrained(base_model, "Sepideh2027/PathogenAgentAI-BioGPT-LoRA")
+model = PeftModel.from_pretrained(base_model, "Sepideh2027/biogpt-clinvar-finetuned")
 
 # Generate prediction
 inputs = tokenizer("Your biomedical input text here", return_tensors="pt")
@@ -373,10 +358,10 @@ print(tokenizer.decode(outputs[0]))
 Alternative inference options:
 
 Method Command / Usage
-Transformers Pipeline pipe = pipeline("text-generation", model="Sepideh2027/PathogenAgentAI-BioGPT-LoRA")
-vLLM Server vllm serve "Sepideh2027/PathogenAgentAI-BioGPT-LoRA"
-SGLang Server python3 -m sglang.launch_server --model-path "Sepideh2027/PathogenAgentAI-BioGPT-LoRA"
-Docker docker model run hf.co/Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+Transformers Pipeline pipe = pipeline("text-generation", model="Sepideh2027/biogpt-clinvar-finetuned")
+vLLM Server vllm serve "Sepideh2027/biogpt-clinvar-finetuned"
+SGLang Server python3 -m sglang.launch_server --model-path "Sepideh2027/biogpt-clinvar-finetuned"
+Docker docker model run hf.co/Sepideh2027/biogpt-clinvar-finetuned
 
 ---
 
@@ -497,7 +482,7 @@ Phase IV — Future Research (Planned)
 Model Availability
 
 Resource Link
-Fine-tuned BioGPT Model (LoRA Adapter) Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+Fine-tuned BioGPT Model (LoRA Adapter) Sepideh2027/biogpt-clinvar-finetuned
 Instruction-Tuning Dataset Sepideh2027/Agent
 
 ---
@@ -534,7 +519,7 @@ If you use this repository in your research, please cite:
 
 The companion language model is available separately:
 
-PathogenAgentAI-BioGPT-LoRA: https://huggingface.co/Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+biogpt-clinvar-finetuned: https://huggingface.co/Sepideh2027/biogpt-clinvar-finetuned
 
 ---
 
@@ -547,8 +532,6 @@ This project is released for academic and research purposes. Please see the LICE
 Acknowledgements
 
 This project builds upon publicly available biomedical resources including ClinVar (NCBI), BioGPT, Hugging Face Transformers, PyTorch, PEFT, vLLM, and SGLang. We gratefully acknowledge the open-source community whose tools made this work possible.
-
-
 
 ---
 
