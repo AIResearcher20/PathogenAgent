@@ -1,4 +1,6 @@
 🧬 PathogenAgentAI
+</p>
+---
 
 <p align="center">
 
@@ -21,8 +23,8 @@
 ---
 <strong>A Modular Platform for Biomedical Data Engineering and Foundation Model Integration</strong>
 </p>
----
 
+</p>
 Current Status
 
 PathogenAgentAI is an actively developed research platform.
