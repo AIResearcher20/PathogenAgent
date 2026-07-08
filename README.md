@@ -1,428 +1,555 @@
 
-<img src="./assets/logo.png" style="width:1600px;">
-
----
-### 🧬 Agentic AI System for Clinical Variant Interpretation: Retrieval-Augmented Biomedical Reasoning with Fine-Tuned Language Models
-### 🧠 Agentic AI System for Evidence-Based Genomic Variant Interpretation  
-### 🔬 Retrieval-Augmented Biomedical Reasoning with Multi-Agent Architecture  
-### 🤖 Fine-Tuned BioGPT + ClinVar + PubMed + GenBank Integration  
+<img src="./assets/logo.png" style="width:800px;">
 
 ---
 
-![Python](https://img.shields.io/badge/Python-3.9%2B-3776AB?style=for-the-badge&logo=python&logoColor=white)
-![PyTorch](https://img.shields.io/badge/PyTorch-2.0%2B-EE4C2C?style=for-the-badge&logo=pytorch&logoColor=white)
-![BioGPT](https://img.shields.io/badge/BioGPT-Fine--Tuned-9C27B0?style=for-the-badge)
-![RAG](https://img.shields.io/badge/RAG-Enabled-orange?style=for-the-badge)
-![FAISS](https://img.shields.io/badge/FAISS-Vector%20Search-blue?style=for-the-badge)
-![Dataset](https://img.shields.io/badge/ClinVar-2M%20Variants-green?style=for-the-badge)
-![License](https://img.shields.io/badge/License-MIT-lightgrey?style=for-the-badge)
+🧬 PathogenAgentAI
 
-</div>
----
+<p align="center">
 
+https://img.shields.io/badge/Python-3.11-blue?logo=python
+https://img.shields.io/badge/PyTorch-2.x-ee4c2c?logo=pytorch
+https://img.shields.io/badge/HuggingFace-Transformers-yellow
+https://img.shields.io/badge/Model-BioGPT-success
+https://img.shields.io/badge/PEFT-LoRA-green
+https://img.shields.io/badge/Data-ClinVar-red
+https://img.shields.io/badge/Status-Active%20Development-orange
+https://img.shields.io/badge/Research-AI%20for%20Science-purple
 
+</p>
 
+<p align="center">
 
----
+A Modular Platform for Biomedical Data Engineering and Foundation Model Integration
 
-📌 Overview
-
-PathogenAgent is an agentic artificial intelligence system for clinical variant interpretation in genomic medicine. The system combines:
-
-Large‑scale genomic data engineering (8.9M ClinVar variants)
-
-Multi‑source biomedical retrieval (PubMed, ClinVar, GenBank)
-
-Evidence‑grounded reasoning via a 10‑module agentic pipeline
-
-Fine‑tuned BioGPT for clinical variant interpretation
-
-
+</p>
 
 ---
 
-📊 Part 1: Dataset Engineering
+Current Status
 
-1.1 Dataset Overview
+PathogenAgentAI is an actively developed research platform.
 
-The system processes a comprehensive ClinVar dataset containing 8,991,566 genetic variants with 10 structured features.
+The biomedical data engineering pipeline, dataset construction workflow, BioGPT integration, and interactive demonstration have been fully implemented.
 
-Property	Value
+Retrieval-Augmented Generation (RAG), evidence integration, and agentic reasoning modules are currently under development.
 
-Total Variants	8,991,566
-Features	10
-Unique Genes	500+
-Clinical Classes	4
-Source	ClinVar (NCBI)
+---
 
+Overview
 
-1.2 Clinical Significance Distribution
+PathogenAgentAI is a modular scientific software platform designed for large-scale biomedical language model applications.
 
-The dataset captures four primary clinical interpretation classes with the following distribution:
+Unlike conventional machine learning repositories that focus exclusively on model training, this project emphasizes the complete computational workflow required to build reproducible biomedical AI systems—from raw genomic data processing to deployable inference pipelines.
 
-Class	Percentage	Count
+The current implementation integrates large-scale ClinVar data engineering with a previously fine-tuned BioGPT language model while establishing the software architecture required for future evidence-aware genomic reasoning.
 
-Likely Benign	67.03%	6,027,000+
-Benign	13.06%	1,174,000+
-Pathogenic	12.45%	1,119,000+
-Likely Pathogenic	7.46%	671,000+
+Although the present version is developed using human genomic variant data, the underlying software architecture is intentionally organism-agnostic and designed to support future extensions toward pathogen genomics, genomic surveillance, and computational epidemiology.
 
+---
 
+Motivation
 
+Modern biomedical AI systems increasingly require more than accurate predictive models.
 
-1.3 Top Genes by Variant Frequency
+They require:
 
-The most frequently mutated genes in the dataset:
+· scalable biomedical data engineering
+· reproducible computational pipelines
+· reusable scientific software
+· transparent experimentation
+· modular architectures that can evolve with future research
 
-Gene	Variant Count
+PathogenAgentAI was developed to address these engineering challenges by separating biomedical data processing, language model integration, software infrastructure, and future reasoning components into independent, reusable modules.
 
-BRCA2	~40,000
-NF1	~35,000
-BRCA1	~30,000
-NEB	~28,000
-ATM	~25,000
-DMD	~22,000
-USH2A	~20,000
-FBN1	~18,000
-RYR1	~15,000
-APC	~12,000
+This philosophy enables the platform to serve as a foundation for future AI systems in genomics, computational biology, and AI for Science.
 
+---
 
+Key Features
 
+· Large-scale biomedical data engineering pipeline
+· Processing of 8.99 million structured ClinVar records
+· Automated quality control and biological filtering
+· Curated dataset containing 4.21 million machine-learning-ready genomic variants
+· Gene-aware dataset partitioning to reduce biological information leakage
+· BioGPT integration using a companion fine-tuned biomedical language model
+· Parameter-efficient model adaptation through LoRA
+· Modular software architecture
+· Interactive inference demonstration
+· Fully reproducible research workflow
 
-1.4 Chromosomal Distribution
+---
 
-Variant distribution across chromosomes shows the highest concentration on:
+Companion Project
 
-Chromosome	Variant Count
+The BioGPT model used by PathogenAgentAI originates from the companion research project:
 
-Chromosome 1	~300,000
-Chromosome 2	~280,000
-Chromosome 3	~260,000
-Chromosome 4	~240,000
-Chromosome 5	~220,000
+BioGPT-ClinVar: Parameter-Efficient Fine-Tuning of a Biomedical Language Model for Genomic Variant Interpretation
 
+The two repositories have distinct objectives.
 
+BioGPT-ClinVar PathogenAgentAI
+Language model adaptation Scientific AI software platform
+BioGPT fine-tuning Biomedical data engineering
+LoRA training Modular infrastructure
+Model publication End-to-end research workflow
+Hugging Face model Future AI reasoning architecture
 
+PathogenAgentAI reuses the fine-tuned BioGPT model as its language model backbone while extending it into a broader scientific software ecosystem.
 
-1.5 Data Processing Pipeline
+---
 
-The dataset engineering pipeline consists of 8 modular stages:
+Research Scope
 
-1. Data Acquisition – Raw ClinVar import from NCBI
+Current implementation:
 
+· Biomedical data engineering
+· ClinVar preprocessing
+· Instruction dataset generation
+· BioGPT integration
+· Interactive inference
 
-2. Data Cleaning – Missing value handling, deduplication, normalization
+Planned extensions:
 
+· Retrieval-Augmented Generation (RAG)
+· Biomedical evidence retrieval
+· Multi-source knowledge integration
+· Reflection and verification modules
+· Agentic scientific reasoning
+· Pathogen genomic analysis
 
-3. Feature Engineering – Gene, chromosome, position, clinical significance extraction
+---
 
+High-Level Architecture
 
-4. Statistical Analysis – Distribution analysis, class balancing
+```text
+                    ┌──────────────────────────────────────────┐
+                    │           PathogenAgentAI                │
+                    └──────────────────────────────────────────┘
 
+         Biomedical Data Layer                Scientific AI Layer
 
-5. Data Visualization – Exploratory data analysis (EDA)
+ ┌──────────────────────────────┐     ┌──────────────────────────────┐
+ │                              │     │                              │
+ │  Data Engineering Pipeline   │ ──► │  BioGPT Inference Platform   │
+ │                              │     │                              │
+ │  • Data Processing           │     │  • Model Loading             │
+ │  • Quality Control           │     │  • Interactive Demo          │
+ │  • Feature Engineering       │     │  • Inference Pipeline        │
+ │  • Dataset Generation        │     │  • Future RAG Modules        │
+ │                              │     │                              │
+ └──────────────────────────────┘     └──────────────────────────────┘
+```
 
+---
 
-6. BioGPT‑Compatible Formatting – Text‑to‑text transformation for LLM fine‑tuning
+Architectural Design Principles
 
+The software architecture was designed according to five engineering principles.
 
-7. Dataset Splitting – Train/Validation/Test (70/15/15)
+1. Modularity — Each computational component performs a single well-defined task, enabling independent testing, maintenance, and future replacement.
 
+2. Reproducibility — Every preprocessing stage follows deterministic workflows. Dataset construction, quality control, feature engineering, and model preparation can be reproduced from the original ClinVar release.
 
-8. Final Dataset Preparation – Ready for model training and evaluation
+3. Scalability — The architecture supports biomedical datasets containing millions of genomic variants while remaining extensible to future pathogen genomic resources.
 
+4. Separation of Concerns — Preprocessing, modeling, and deployment are implemented as independent components, simplifying future experimentation and collaborative development.
+
+5. Extensibility — Although the current implementation focuses on ClinVar-derived genomic variants, the software architecture remains organism-agnostic.
+
+---
+
+Current Software Components
+
+Module Status
+Biomedical Data Processing ✅ Implemented
+Automated Quality Control ✅ Implemented
+Feature Engineering ✅ Implemented
+Dataset Statistics ✅ Implemented
+Gene-aware Dataset Splitting ✅ Implemented
+Instruction Dataset Generation ✅ Implemented
+BioGPT Integration ✅ Implemented
+Interactive Inference Demo ✅ Implemented
+
+---
+
+Planned Platform Components
+
+Future Module Status
+Retrieval-Augmented Generation (RAG) 🚧 Planned
+Biomedical Evidence Retrieval 🚧 Planned
+Reflection Module 🚧 Planned
+Evidence Verification 🚧 Planned
+Confidence Estimation 🚧 Planned
+Multi-Agent Scientific Workflow 🚧 Planned
+
+---
+
+Biomedical Data Engineering Pipeline
+
+A major objective of PathogenAgentAI is to establish a fully reproducible biomedical data engineering workflow capable of transforming raw clinical genomic repositories into machine-learning-ready corpora.
+
+Rather than relying on preprocessed benchmark datasets, the entire preprocessing pipeline was designed and implemented from scratch, allowing every transformation step—from raw data ingestion to final model-ready datasets—to remain transparent, reproducible, and biologically consistent.
+
+---
+
+Data Source
+
+The project is built upon ClinVar, one of the largest publicly available repositories of clinically annotated genomic variants maintained by the National Center for Biotechnology Information (NCBI).
+
+---
+
+Dataset Statistics
+
+Processing Stage Records
+Structured ClinVar records 8,991,566
+After automated quality control 8,500,622
+Final curated biological dataset 4,216,934
+Training dataset 2,690,964
+Validation dataset 725,719
+Test dataset 800,251
+
+---
+
+Pipeline Overview
+
+```text
+ClinVar
+    │
+    ▼
+Structured Parsing
+    │
+    ▼
+Quality Control
+    │
+    ▼
+Biological Filtering
+    │
+    ▼
+Feature Engineering
+    │
+    ▼
+Gene-aware Dataset Split
+    │
+    ▼
+Instruction Dataset Generation
+    │
+    ▼
+BioGPT-ready Dataset
+```
+
+---
+
+Stage 1 — Structured Parsing
+
+From the original ClinVar release, biologically relevant attributes were extracted, including gene symbol, clinical significance, chromosome, genomic position, and genome assembly.
+
+8,991,566 genomic variant records were processed.
+
+---
+
+Stage 2 — Automated Quality Control
+
+A dedicated quality control pipeline performs missing value removal, malformed record filtering, unsupported annotation removal, and normalization of clinical significance labels.
+
+After quality control: 8,500,622 high-quality genomic variants.
+
+---
+
+Stage 3 — Biological Dataset Curation
+
+Task-specific preprocessing and biological filtering were applied to retain clinically informative variants suitable for downstream language model adaptation.
+
+Final curated dataset: 4,216,934 biologically curated genomic variants.
+
+---
+
+Stage 4 — Gene-aware Dataset Partitioning
+
+To reduce biological information leakage, a gene-aware partitioning strategy was implemented, ensuring variants from the same gene do not appear across training and evaluation sets.
+
+Split Records
+Training 2,690,964
+Validation 725,719
+Test 800,251
+
+---
+
+Stage 5 — Instruction Dataset Generation
+
+Curated genomic records were transformed into instruction-style supervision suitable for biomedical language model adaptation, following an instruction–response paradigm.
+
+---
+
+Tokenization Pipeline
+
+The complete dataset was tokenized using the BioGPT tokenizer with parallel tokenization via Hugging Face Datasets, producing tokenized inputs, attention masks, and target labels.
+
+---
+
+Engineering Principles
+
+The biomedical preprocessing workflow follows four design principles: biological consistency, reproducibility, scalability, and modularity.
+
+---
+
+BioGPT Integration
+
+PathogenAgentAI does not train a biomedical language model from scratch. Instead, it integrates a previously developed domain-adapted BioGPT model into a larger scientific software ecosystem.
+
+Companion Model
+
+The language model originates from:
+
+PathogenAgentAI-BioGPT-LoRA
+A parameter-efficient adaptation of BioGPT for clinical genomic variant interpretation using Low-Rank Adaptation (LoRA).
+
+The model is publicly available on Hugging Face:
+
+https://img.shields.io/badge/🤗%20Hugging%20Face-Model-ffd21e
+
+BioGPT-ClinVar (Companion) PathogenAgentAI
+Biomedical language model adaptation Scientific AI software platform
+LoRA fine-tuning Biomedical data engineering
+Model optimization Modular computational infrastructure
+Hugging Face model release Interactive research platform
+Training pipeline End-to-end biomedical workflow
+
+---
+
+Model Backbone
+
+Property Value
+Base Model BioGPT (microsoft/biogpt)
+Adaptation Method Low-Rank Adaptation (LoRA)
+Domain Biomedical NLP
+Task Clinical Genomic Variant Interpretation
+Availability Public on Hugging Face
+
+---
+
+Why BioGPT?
+
+BioGPT was selected for its biomedical pretraining, domain-specific contextual representations, compatibility with clinical terminology, and efficient adaptation through parameter-efficient fine-tuning.
+
+---
+
+Parameter-Efficient Adaptation
+
+The underlying language model was adapted using Low-Rank Adaptation (LoRA), which introduces trainable low-rank matrices while keeping the pretrained backbone frozen. This approach provides lower GPU memory requirements, faster experimentation, reduced training cost, improved reproducibility, and easier adaptation to future tasks.
+
+---
+
+Usage
+
+You can load and use the fine-tuned model directly from Hugging Face:
+
+```python
+from peft import PeftModel
+from transformers import AutoModelForCausalLM, AutoTokenizer
+
+# Load base model and tokenizer
+base_model = AutoModelForCausalLM.from_pretrained("microsoft/biogpt")
+tokenizer = AutoTokenizer.from_pretrained("microsoft/biogpt")
+
+# Load LoRA adapter
+model = PeftModel.from_pretrained(base_model, "Sepideh2027/PathogenAgentAI-BioGPT-LoRA")
+
+# Generate prediction
+inputs = tokenizer("Your biomedical input text here", return_tensors="pt")
+outputs = model.generate(**inputs, max_length=128)
+print(tokenizer.decode(outputs[0]))
+```
+
+Alternative inference options:
+
+Method Command / Usage
+Transformers Pipeline pipe = pipeline("text-generation", model="Sepideh2027/PathogenAgentAI-BioGPT-LoRA")
+vLLM Server vllm serve "Sepideh2027/PathogenAgentAI-BioGPT-LoRA"
+SGLang Server python3 -m sglang.launch_server --model-path "Sepideh2027/PathogenAgentAI-BioGPT-LoRA"
+Docker docker model run hf.co/Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+
+---
+
+Current Inference Workflow
+
+```text
+Biomedical Input
+        │
+        ▼
+Input Validation
+        │
+        ▼
+BioGPT Tokenizer
+        │
+        ▼
+Fine-tuned BioGPT Model (LoRA)
+        │
+        ▼
+Generated Biomedical Interpretation
+        │
+        ▼
+Structured Output
+```
+
+---
+
+Planned Extensions
+
+· Retrieval-Augmented Generation (RAG)
+· Biomedical evidence retrieval
+· Evidence ranking
+· Confidence estimation
+· Hallucination verification
+· Multi-agent scientific reasoning
+
+---
+
+Interactive Demonstration
+
+PathogenAgentAI includes an interactive demonstration of the current inference pipeline, illustrating the complete workflow from user input to biomedical interpretation.
+
+<p align="center">
+
+Demo Preview
+
+<!-- Replace with your GIF -->
+
+<img src="figures/demo.gif" width="950">
+
+</p>
+
+The current demonstration supports loading the fine-tuned BioGPT model, interactive biomedical inference, structured prediction output, and real-time demonstration of the current software pipeline.
+
+---
+
+Repository Structure
+
+```text
+PathogenAgentAI/
+├── data/
+│   ├── preprocessing/
+│   ├── statistics/
+│   ├── train/
+│   ├── validation/
+│   └── test/
+├── demo/
+│   ├── app.py
+│   ├── ui/
+│   └── assets/
+├── models/
+│   ├── loader.py
+│   ├── inference.py
+│   └── tokenizer.py
+├── notebooks/
+├── docs/
+├── figures/
+├── README.md
+└── LICENSE
+```
+
+---
+
+Current Implementation Status
+
+Component Status
+ClinVar preprocessing ✅
+Biomedical data engineering ✅
+Automated quality control ✅
+Dataset statistics ✅
+Gene-aware dataset partitioning ✅
+Instruction dataset generation ✅
+BioGPT integration ✅
+Interactive inference demo ✅
+Modular repository organization ✅
+
+---
+
+Development Roadmap
+
+Phase I — Biomedical Data Engineering (Completed)
+
+· ClinVar processing, quality control, biological filtering, feature engineering, dataset generation, tokenization
+
+Phase II — Foundation Model Integration (Completed)
+
+· BioGPT integration, LoRA-compatible inference, interactive demonstration, modular software architecture
+
+Phase III — Scientific AI Platform (In Progress)
+
+· Retrieval-Augmented Generation, biomedical knowledge retrieval, evidence ranking, reflection workflow, verification pipeline
+
+Phase IV — Future Research (Planned)
+
+· Pathogen genomic databases, knowledge graph integration, agentic biomedical reasoning, public health decision support, computational epidemiology workflows
+
+---
+
+Model Availability
+
+Resource Link
+Fine-tuned BioGPT Model (LoRA Adapter) Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+Instruction-Tuning Dataset Sepideh2027/Agent
+
+---
+
+Reproducibility
+
+The repository provides documented preprocessing workflows, curated biomedical datasets, reproducible repository organization, and publicly available model and dataset resources, allowing future researchers to reproduce, extend, and reuse the complete computational workflow.
+
+---
+
+Scientific Impact
+
+PathogenAgentAI contributes to biomedical AI research through:
+
+· Large-scale Biomedical Data Engineering — A reproducible pipeline transforming millions of raw ClinVar records into machine-learning-ready datasets
+· Gene-aware Dataset Construction — Partitioning by gene identity to reduce biological information leakage
+· Scientific Software Architecture — Modular separation of data engineering, model integration, inference, and future reasoning components
+· Foundation for Future AI Systems — Organism-agnostic architecture supporting future pathogen genomics, genomic surveillance, and computational epidemiology
+
+---
+
+Citation
+
+If you use this repository in your research, please cite:
+
+```bibtex
+@software{Moafi2026_pathogenagentai,
+  author       = {Sepideh Moafi},
+  title        = {PathogenAgentAI: A Modular Platform for Biomedical Data Engineering and Foundation Model Integration},
+  year         = {2026},
+  url          = {https://github.com/AIResearcher20/PathogenAgentAI}
+}
+```
+
+The companion language model is available separately:
+
+PathogenAgentAI-BioGPT-LoRA: https://huggingface.co/Sepideh2027/PathogenAgentAI-BioGPT-LoRA
+
+---
+
+License
+
+This project is released for academic and research purposes. Please see the LICENSE file for additional information.
+
+---
+
+Acknowledgements
+
+This project builds upon publicly available biomedical resources including ClinVar (NCBI), BioGPT, Hugging Face Transformers, PyTorch, PEFT, vLLM, and SGLang. We gratefully acknowledge the open-source community whose tools made this work possible.
 
 
 
 ---
 
-🧬 Part 2: Model Architecture & Agentic Pipeline
+<p align="center">
 
-2.1 Core Language Model
+PathogenAgentAI
 
-The system uses a fine‑tuned BioGPT model as its core reasoning engine:
+Building trustworthy AI infrastructure for computational biology and AI for Science.
 
-Property	Value
-
-Model	Sepideh2027/biogpt-clinvar-finetuned
-Architecture	BioGPT (Causal Language Model)
-Parameters	~300M
-Training Data	ClinVar variants (8.9M records)
-Domain	Clinical variant interpretation
-
-
-Model Link: Hugging Face – Sepideh2027/biogpt-clinvar-finetuned
-
-2.2 Agentic Pipeline (10 Modules)
-
-The system implements a 10‑module agentic pipeline for end‑to‑end clinical variant interpretation:
-
-Module 1: Intent Router
-
-Function: Classifies the input query and determines required tools
-Input: User query (text)
-Output: Intent type + required tools + confidence score
-
-Module 2: Tool Executor
-
-Function: Executes queries across biomedical databases
-Sources: PubMed (literature), ClinVar (variants), GenBank (sequences)
-Output: Raw evidence from all sources
-
-Module 3: Evidence Integration
-
-Function: Normalizes, deduplicates, and merges evidence
-Methods: Identifier‑based deduplication, semantic similarity
-Output: Canonical evidence list
-
-Module 4: Evidence Ranking
-
-Function: Scores and ranks evidence by relevance
-Methods: TF‑IDF + Semantic Similarity (all‑MiniLM‑L6‑v2) + Cross‑Encoder (optional)
-Output: Ranked evidence with composite scores
-
-Module 5: RAG Context Builder
-
-Function: Assembles top‑ranked evidence into structured context
-Output: Evidence‑grounded context for LLM generation
-
-Module 6: Reflection Agent
-
-Function: Self‑evaluates reasoning quality and evidence sufficiency
-Metrics: Coverage, coherence, confidence calibration
-Output: Reflection score + action recommendation
-
-Module 7: BioGPT Generator
-
-Function: Generates evidence‑grounded responses
-Model: Sepideh2027/biogpt-clinvar-finetuned
-Output: Comprehensive, cited clinical interpretation
-
-Module 8: Verification Agent
-
-Function: Detects hallucinations and verifies factual consistency
-Methods: Claim extraction, evidence‑based verification
-Output: Faithfulness score + hallucination claims
-
-Module 9: Report & Logger
-
-Function: Generates structured reports and maintains audit logs
-Formats: JSON, Markdown, PDF
-Output: Complete audit trail
-
-Module 10: Orchestrator
-
-Function: Manages workflow, coordinates module execution
-Output: Final structured result (AgentResult)
-
-2.3 Module Interaction Flow
-
-User Query
-│
-▼
-[1. Intent Router] ──► intent, tools
-│
-▼
-[2. Tool Executor] ──► raw evidence
-│
-▼
-[3. Evidence Integration] ──► canonical evidence
-│
-▼
-[4. Evidence Ranking] ──► ranked evidence
-│
-▼
-[5. RAG Context Builder] ──► structured context
-│
-▼
-[6. Reflection Agent] ──► reflection_score
-│
-▼
-[7. BioGPT Generator] ──► generated response
-│
-▼
-[8. Verification Agent] ──► faithfulness_score
-│
-▼
-[9. Report & Logger] ──► JSON / Markdown / PDF
-│
-▼
-[10. Orchestrator] ──► AgentResult
-
+</p>
 
 ---
-
-📊 Dataset – Model Integration
-
-The 8‑module dataset pipeline and 10‑module agentic pipeline are integrated through:
-
-Component	Role
-
-Dataset Pipeline	Provides training/evaluation data for the model
-Agentic Pipeline	Uses the fine‑tuned model for inference
-Shared Artifacts	Gene lists, variant classes, clinical significance mappings
-
-
-
----
-
-🔬 Key Contributions
-
-Dataset Engineering
-
-8.9M ClinVar variants processed and structured
-
-10 features extracted per variant
-
-500+ genes with variant annotations
-
-4 clinical significance classes mapped
-
-
-Model & Architecture
-
-Fine‑tuned BioGPT model publicly available
-
-10‑module agentic pipeline for clinical reasoning
-
-Evidence‑grounded generation with citation tracking
-
-Hallucination detection via verification module
-
-
-
----
-
-🛠 Tech Stack
-
-Core Libraries
-
-PyTorch – Deep learning framework
-
-Transformers (Hugging Face) – Model fine‑tuning
-
-Sentence‑Transformers – Semantic embeddings
-
-FAISS – Vector similarity search
-
-
-Data Processing
-
-Pandas – Data manipulation
-
-NumPy – Numerical computing
-
-Scikit‑learn – ML utilities
-
-
-APIs & Services
-
-NCBI Entrez – PubMed, ClinVar, GenBank retrieval
-
-Hugging Face Hub – Model hosting
-
-
-
----
-
-📈 Project Status
-
-✅ Completed
-
-Dataset Engineering: 8.9M ClinVar variants processed (10 features, 500+ genes)
-
-Model Fine‑tuning: BioGPT fine‑tuned on ClinVar (publicly available)
-
-Architecture Design: 10‑module agentic pipeline + 8‑module dataset pipeline
-
-Visualization: Complete EDA (gene distribution, class distribution, chromosome distribution)
-
-Documentation: Full system documentation
-
-
-🔄 In Progress
-
-Pipeline Integration: End‑to‑end agentic pipeline integration
-
-RAG Optimization: Retrieval and generation tuning
-
-Verification Module: Hallucination detection fine‑tuning
-
-Benchmarking: Comprehensive evaluation on ClinVar test set
-
-Manuscript: Paper preparation
-
-
-
----
-
-🚀 Installation
-
-git clone https://github.com/yourusername/PathogenAgent.git    
-cd PathogenAgent    
-pip install -r requirements.txt  
-  
-Requirements  
-  
-torch>=2.0.0    
-transformers>=4.30.0    
-sentence-transformers>=2.2.0    
-faiss-cpu>=1.7.4    
-numpy>=1.24.0    
-pandas>=2.0.0    
-scikit-learn>=1.3.0    
-scipy>=1.10.0    
-matplotlib>=3.7.0    
-seaborn>=0.12.0    
-tqdm>=4.65.0    
-requests>=2.31.0    
-biopython>=1.81    
-gradio>=4.0.0    
-reportlab>=4.0.0    
-statsmodels>=0.14.0  
-  
-  
----  
-  
-📄 License  
-  
-MIT License  
-  
-  
----  
-  
-👤 Author  
-  
-Vania Karimi  
-  
-  
----  
-  
-📎 Related Work  
-  
-· Fine‑tuned BioGPT: Sepideh2027/biogpt-clinvar-finetuned  
-· ClinVar Dataset: Sepideh2027/clinvar-project-backup  
-  
-  
----  
-  
-📧 Contact  
-  
-For questions or collaborations, please open an issue.  
-  
-  
----  
-  
-🙏 Acknowledgments  
-  
-· NCBI for open access to ClinVar, PubMed, and GenBank  
-· Hugging Face for model hosting and infrastructure  
-· BioGPT team for the base architecture  
-  
-  
----  
-  
----    
-    
-.** 🚀
