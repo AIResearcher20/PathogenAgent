@@ -7,16 +7,24 @@
 
 <p align="center">
 
-https://img.shields.io/badge/Python-3.11-blue?logo=python
-https://img.shields.io/badge/PyTorch-2.x-ee4c2c?logo=pytorch
-https://img.shields.io/badge/HuggingFace-Transformers-yellow
-https://img.shields.io/badge/Model-BioGPT-success
-https://img.shields.io/badge/PEFT-LoRA-green
-https://img.shields.io/badge/Data-ClinVar-red
-https://img.shields.io/badge/Status-Active%20Development-orange
-https://img.shields.io/badge/Research-AI%20for%20Science-purple
+[![Python](https://img.shields.io/badge/Python-3.11-blue?logo=python)](https://www.python.org/)
+[![PyTorch](https://img.shields.io/badge/PyTorch-2.x-ee4c2c?logo=pytorch)](https://pytorch.org/)
+[![Transformers](https://img.shields.io/badge/HuggingFace-Transformers-yellow)](https://huggingface.co/docs/transformers/index)
+[![BioGPT](https://img.shields.io/badge/Model-BioGPT-success)](https://huggingface.co/microsoft/biogpt)
+[![LoRA](https://img.shields.io/badge/PEFT-LoRA-green)](https://huggingface.co/docs/peft/en/developer_guides/lora)
+[![ClinVar](https://img.shields.io/badge/Data-ClinVar-red)](https://www.ncbi.nlm.nih.gov/clinvar/)
+[![Status](https://img.shields.io/badge/Status-Active%20Development-orange)]()
+[![Research](https://img.shields.io/badge/Research-AI%20for%20Science-purple)]()
 
 </p>
+
+<p align="center">
+
+**A Modular Platform for Biomedical Data Engineering and Foundation Model Integration**
+
+</p>
+
+---
 
 <p align="center">
 
