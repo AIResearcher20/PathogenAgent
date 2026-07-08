@@ -1,9 +1,7 @@
-🧬 PathogenAgentAI
-</p>
----
+# 🧬 PathogenAgentAI
 
-<p align="center">
-
+<hr>
+ # 🧬 PathogenAgentAI
 
 <p align="center">
   <a href="https://www.python.org/"><img src="https://img.shields.io/badge/Python-3.11-3776AB?style=for-the-badge&logo=python&logoColor=white" alt="Python 3.11"></a>
@@ -20,22 +18,25 @@
   <a href="https://opensource.org/licenses/MIT"><img src="https://img.shields.io/badge/License-MIT-3D9970?style=for-the-badge" alt="License: MIT"></a>
 </p>
 
----
-<strong>A Modular Platform for Biomedical Data Engineering and Foundation Model Integration</strong>
+<p align="center">
+  <strong>A Modular Platform for Biomedical Data Engineering and Foundation Model Integration</strong>
 </p>
-
-</p>
-Current Status
-
-PathogenAgentAI is an actively developed research platform.
-
-The biomedical data engineering pipeline, dataset construction workflow, BioGPT integration, and interactive demonstration have been fully implemented.
-
-Retrieval-Augmented Generation (RAG), evidence integration, and agentic reasoning modules are currently under development.
 
 ---
 
-Overview
+> **Current Status**
+>
+> PathogenAgentAI is an actively developed research platform.
+>
+> The biomedical data engineering pipeline, dataset construction workflow, BioGPT integration, and interactive demonstration have been fully implemented.
+>
+> Retrieval-Augmented Generation (RAG), evidence integration, and agentic reasoning modules are currently under development.
+
+---
+
+## Overview
+...
+
 
 PathogenAgentAI is a modular scientific software platform designed for large-scale biomedical language model applications.
 
