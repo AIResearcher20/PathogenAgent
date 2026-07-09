@@ -26,15 +26,13 @@
 >
 > PathogenAgentAI is an actively developed research platform.
 >
-> The biomedical data engineering pipeline, dataset construction workflow, BioGPT integration, and interactive demonstration have been fully implemented.
+> The biomedical data engineering pipeline, dataset construction workflow, BioGPT integration, and an interactive biomedical inference and UniProt evidence retrieval prototype have been implemented.
 >
 > Retrieval-Augmented Generation (RAG), evidence integration, and agentic reasoning modules are currently under development.
 
 ---
 
 ## Overview
-...
-
 
 PathogenAgentAI is a modular scientific software platform designed for large-scale biomedical language model applications.
 
@@ -46,17 +44,17 @@ Although the present version is developed using human genomic variant data, the 
 
 ---
 
-Motivation
+## Motivation
 
 Modern biomedical AI systems increasingly require more than accurate predictive models.
 
 They require:
 
-· scalable biomedical data engineering
-· reproducible computational pipelines
-· reusable scientific software
-· transparent experimentation
-· modular architectures that can evolve with future research
+- scalable biomedical data engineering
+- reproducible computational pipelines
+- reusable scientific software
+- transparent experimentation
+- modular architectures that can evolve with future research
 
 PathogenAgentAI was developed to address these engineering challenges by separating biomedical data processing, language model integration, software infrastructure, and future reasoning components into independent, reusable modules.
 
@@ -64,62 +62,64 @@ This philosophy enables the platform to serve as a foundation for future AI syst
 
 ---
 
-Key Features
+## Key Features
 
-· Large-scale biomedical data engineering pipeline
-· Processing of 8.99 million structured ClinVar records
-· Automated quality control and biological filtering
-· Curated dataset containing 4.21 million machine-learning-ready genomic variants
-· Gene-aware dataset partitioning to reduce biological information leakage
-· BioGPT integration using a companion fine-tuned biomedical language model
-· Parameter-efficient model adaptation through LoRA
-· Modular software architecture
-· Interactive inference demonstration
-· Fully reproducible research workflow
+- Large-scale biomedical data engineering pipeline
+- Processing of **8.99 million** structured ClinVar records
+- Automated quality control and biological filtering
+- Curated dataset containing **4.21 million** machine-learning-ready genomic variants
+- Gene-aware dataset partitioning to reduce biological information leakage
+- BioGPT integration using a companion fine-tuned biomedical language model
+- Parameter-efficient model adaptation through LoRA
+- Modular software architecture
+- Interactive inference demonstration
+- Fully reproducible research workflow
 
 ---
 
-Companion Project
+## Companion Project
 
 The BioGPT model used by PathogenAgentAI originates from the companion research project:
 
-BioGPT-ClinVar: Parameter-Efficient Fine-Tuning of a Biomedical Language Model for Genomic Variant Interpretation
+> **BioGPT-ClinVar: Parameter-Efficient Fine-Tuning of a Biomedical Language Model for Genomic Variant Interpretation**
 
 The two repositories have distinct objectives.
 
-BioGPT-ClinVar PathogenAgentAI
-Language model adaptation Scientific AI software platform
-BioGPT fine-tuning Biomedical data engineering
-LoRA training Modular infrastructure
-Model publication End-to-end research workflow
-Hugging Face model Future AI reasoning architecture
+| BioGPT-ClinVar | PathogenAgentAI |
+|----------------|-----------------|
+| Language model adaptation | Scientific AI software platform |
+| BioGPT fine-tuning | Biomedical data engineering |
+| LoRA training | Modular infrastructure |
+| Model publication | End-to-end research workflow |
+| Hugging Face model | Future AI reasoning architecture |
 
 PathogenAgentAI reuses the fine-tuned BioGPT model as its language model backbone while extending it into a broader scientific software ecosystem.
 
 ---
 
-Research Scope
+## Research Scope
 
-Current implementation:
+**Current implementation:**
 
-· Biomedical data engineering
-· ClinVar preprocessing
-· Instruction dataset generation
-· BioGPT integration
-· Interactive inference
+- Biomedical data engineering
+- ClinVar preprocessing
+- Instruction dataset generation
+- BioGPT integration
+- Interactive inference
+- UniProt evidence retrieval prototype
 
-Planned extensions:
+**Planned extensions:**
 
-· Retrieval-Augmented Generation (RAG)
-· Biomedical evidence retrieval
-· Multi-source knowledge integration
-· Reflection and verification modules
-· Agentic scientific reasoning
-· Pathogen genomic analysis
+- Retrieval-Augmented Generation (RAG)
+- Biomedical evidence retrieval
+- Multi-source knowledge integration
+- Reflection and verification modules
+- Agentic scientific reasoning
+- Pathogen genomic analysis
 
 ---
 
-High-Level Architecture
+## High-Level Architecture
 
 ```text
                     ┌──────────────────────────────────────────┐
@@ -169,6 +169,7 @@ Gene-aware Dataset Splitting ✅ Implemented
 Instruction Dataset Generation ✅ Implemented
 BioGPT Integration ✅ Implemented
 Interactive Inference Demo ✅ Implemented
+UniProt Evidence Retrieval Prototype ✅ Implemented
 
 ---
 
@@ -404,19 +405,63 @@ Planned Extensions
 
 Interactive Demonstration
 
-PathogenAgentAI includes an interactive demonstration of the current inference pipeline, illustrating the complete workflow from user input to biomedical interpretation.
+PathogenAgentAI includes an interactive research prototype that demonstrates the current biomedical inference and evidence retrieval workflow.
+
+The prototype accepts natural-language biomedical questions, retrieves semantically relevant functional annotations from UniProt using vector-based retrieval, ranks supporting evidence, constructs an evidence-aware context, and generates a biomedical response through the current inference pipeline.
+
+The demonstration is intended to validate the core retrieval and evidence integration workflow before the full implementation of the multi-agent architecture.
+
+Current Prototype Capabilities
+
+· Interactive biomedical question answering
+· Semantic retrieval from UniProt
+· FAISS-based vector search
+· Evidence ranking
+· Context construction
+· Evidence-grounded response generation
+· Interactive Gradio interface
 
 <p align="center">
-
-Demo Preview
-
-<!-- Replace with your GIF -->
-
-<img src="figures/demo.gif" width="950">
-
+  <img src="figures/demo.gif" width="850" alt="PathogenAgentAI Demo">
 </p>
 
-The current demonstration supports loading the fine-tuned BioGPT model, interactive biomedical inference, structured prediction output, and real-time demonstration of the current software pipeline.
+Current Workflow
+
+```text
+Biomedical Question
+        │
+        ▼
+Sentence Embedding
+        │
+        ▼
+Semantic Retrieval (UniProt)
+        │
+        ▼
+Evidence Ranking
+        │
+        ▼
+Context Construction
+        │
+        ▼
+Biomedical Response Generation
+        │
+        ▼
+Evidence Display
+```
+
+Future Integration
+
+The current prototype represents an initial implementation of the evidence retrieval workflow. Future releases of PathogenAgentAI will extend this pipeline by integrating:
+
+· ClinVar
+· PubMed
+· GenBank
+· Retrieval-Augmented Generation (RAG)
+· Evidence verification
+· Reflection modules
+· Complete multi-agent scientific reasoning framework
+
+Note: The current demo represents the implemented inference and retrieval workflow. Future versions will integrate full agentic reasoning and evidence-aware decision support.
 
 ---
 
@@ -458,6 +503,7 @@ Gene-aware dataset partitioning ✅
 Instruction dataset generation ✅
 BioGPT integration ✅
 Interactive inference demo ✅
+UniProt evidence retrieval prototype ✅
 Modular repository organization ✅
 
 ---
@@ -486,7 +532,8 @@ Model Availability
 
 Resource Link
 Fine-tuned BioGPT Model (LoRA Adapter) Sepideh2027/biogpt-clinvar-finetuned
-Instruction-Tuning Dataset Sepideh2027/Agent
+ClinVar Dataset Sepideh2027/Agent
+BioGPT Instruction Dataset Sepideh2027/Agent
 
 ---
 
@@ -545,5 +592,5 @@ PathogenAgentAI
 Building trustworthy AI infrastructure for computational biology and AI for Science.
 
 </p>
+```
 
----
