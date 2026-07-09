@@ -402,24 +402,26 @@ Planned Extensions
 · Multi-agent scientific reasoning
 
 ---
-
 Interactive Demonstration
 
 PathogenAgentAI includes an interactive research prototype that demonstrates the current biomedical inference and evidence retrieval workflow.
 
-The prototype accepts natural-language biomedical questions, retrieves semantically relevant functional annotations from UniProt using vector-based retrieval, ranks supporting evidence, constructs an evidence-aware context, and generates a biomedical response through the current inference pipeline.
+The prototype accepts natural-language biomedical questions through a Gradio interface, retrieves functionally relevant protein annotations from UniProt using dense vector retrieval (Sentence Transformers + FAISS), ranks the retrieved evidence, constructs an evidence-aware context, generates a biomedical response using a language model, and performs a lightweight evidence verification step.
 
-The demonstration is intended to validate the core retrieval and evidence integration workflow before the full implementation of the multi-agent architecture.
+The current implementation serves as a proof-of-concept for the retrieval and inference pipeline that will later be extended into the complete agentic architecture.
 
 Current Prototype Capabilities
 
 · Interactive biomedical question answering
-· Semantic retrieval from UniProt
-· FAISS-based vector search
+· UniProt knowledge retrieval
+· Sentence Transformer embeddings
+· FAISS vector similarity search
+· Intent routing
 · Evidence ranking
 · Context construction
-· Evidence-grounded response generation
-· Interactive Gradio interface
+· Biomedical response generation
+· Basic evidence verification
+· Gradio-based web interface
 
 <p align="center">
   <img src="figures/demo.gif" width="850" alt="PathogenAgentAI Demo">
@@ -431,10 +433,13 @@ Current Workflow
 Biomedical Question
         │
         ▼
+Intent Routing
+        │
+        ▼
 Sentence Embedding
         │
         ▼
-Semantic Retrieval (UniProt)
+FAISS Retrieval
         │
         ▼
 Evidence Ranking
@@ -446,22 +451,36 @@ Context Construction
 Biomedical Response Generation
         │
         ▼
-Evidence Display
+Evidence Verification
+        │
+        ▼
+Final Response
 ```
 
-Future Integration
+Current Knowledge Source
 
-The current prototype represents an initial implementation of the evidence retrieval workflow. Future releases of PathogenAgentAI will extend this pipeline by integrating:
+The current prototype retrieves biomedical evidence exclusively from UniProt protein functional annotations.
+
+Future versions will extend the retrieval layer by integrating additional biomedical resources, including:
 
 · ClinVar
 · PubMed
 · GenBank
-· Retrieval-Augmented Generation (RAG)
-· Evidence verification
-· Reflection modules
-· Complete multi-agent scientific reasoning framework
 
-Note: The current demo represents the implemented inference and retrieval workflow. Future versions will integrate full agentic reasoning and evidence-aware decision support.
+Future Integration
+
+The current prototype represents the first implemented component of the future PathogenAgentAI agentic framework.
+
+Planned extensions include:
+
+· Retrieval-Augmented Generation (RAG)
+· Multi-source evidence integration
+· Reflection module
+· Confidence estimation
+· Multi-agent biomedical reasoning
+
+Note: The current demonstration implements the retrieval, evidence ranking, context construction, response generation, and verification pipeline. The complete multi-agent reasoning framework described in the project roadmap is under active development.
+
 
 ---
 
