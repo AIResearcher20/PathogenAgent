@@ -1,8 +1,5 @@
 # 🧬 PathogenAgentAI
-**Year:** 2024–Present  
-**License:** MIT  
-**Author:** Sepideh Moafi
----
+
 ```
 
 <hr>
@@ -26,7 +23,10 @@
 </p>
 
 ---
-
+**Year:** 2024–Present  
+**License:** MIT  
+**Author:** Sepideh Moafi
+---
 > **Current Status**
 >
 > PathogenAgentAI is an actively developed research platform.
