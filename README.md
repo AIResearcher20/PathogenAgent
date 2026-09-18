@@ -578,11 +578,11 @@ Citation
 If you use this repository in your research, please cite:
 
 ```bibtex
-@software{Moafi2026_pathogenagentai,
+@software{Moafi2025_pathogenagentai,
   author       = {Sepideh Moafi},
   title        = {PathogenAgentAI: A Modular Platform for Biomedical Data Engineering and Foundation Model Integration},
-  year         = {2026},
-  url          = {https://github.com/AIResearcher20/PathogenAgentAI}
+  year         = {2025},
+  url          = {https://github.com/AIResearcher20/PathogenAgent}
 }
 ```
 
