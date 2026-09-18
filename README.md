@@ -2,6 +2,7 @@
 **Year:** 2024–Present  
 **License:** MIT  
 **Author:** Sepideh Moafi
+---
 ```
 
 <hr>
